@@ -11,6 +11,7 @@ export const keys = [TOKEN_KEY, USER_KEY];
 const AuthContext = React.createContext();
 
 function AuthProvider(props) {
+    
     const [state, dispatch] = useReducer(reducer, initialState || {});
 
     const getAuthState = async () => {
