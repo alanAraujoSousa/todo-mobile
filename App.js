@@ -1,4 +1,3 @@
-// * Description: App Entry Point
 import React, {Component} from 'react';
 
 import Router from './app/router'
