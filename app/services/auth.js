@@ -1,10 +1,10 @@
 import axios from 'axios';
 
-import * as c from '../constants';
+import * as c from '../constants/api.constants';
 
 export async function register(data){
     try{
-        let res = await axios.post(c.REGISTER, data);
+        let res = await axios.post(c.REGISTER_ENDPOINT, data);
 
         return res.data;
     }catch (e) {
@@ -14,7 +14,7 @@ export async function register(data){
 
 export async function login(data){
     try{
-        let res = await axios.post(c.LOGIN, data);
+        let res = await axios.post(c.LOGIN_ENDPOINT, data);
 
         return res.data;
     }catch (e) {
