@@ -9,12 +9,12 @@ export default function AuthLoading(props) {
     const { getAuthState } = useAuth();
 
     useEffect(() => {
-        initialize()
+        initialize();
     }, []);
 
     async function initialize() {
         try {
-            const {user} = await getAuthState();
+            const { user } = await getAuthState();
 
             if (user) {
                 navigate('App');

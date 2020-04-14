@@ -10,7 +10,6 @@ import {Header, ErrorText} from "../../components/Shared";
 export default function Register(props) {
     const {navigation} = props;
 
-    //1 - DECLARE VARIABLES
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(false);
 
