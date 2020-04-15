@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { View, TouchableOpacity, Text, StyleSheet } from 'react-native'
+import { ScrollView } from 'react-native-gesture-handler';
+import { Icon } from 'react-native-elements';
 
 export default class List extends Component {
 
@@ -19,9 +21,9 @@ export default class List extends Component {
         const { list } = this.props;
         
         return (
-            <View>
+            <ScrollView>
                 {list.items.map(this.renderItem)}
-            </View>
+            </ScrollView>
         )
     }
 }
@@ -29,7 +31,11 @@ export default class List extends Component {
 const styles = StyleSheet.create({
   item: {
     backgroundColor: 'whitesmoke',
-    marginBottom: 5,
     padding: 15,
+    marginBottom: 5,
+    borderRadius: 4,
+    borderColor: '#aab',
+    borderWidth: 1,
+    marginHorizontal: 20
   },
 })

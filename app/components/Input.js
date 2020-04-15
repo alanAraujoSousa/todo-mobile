@@ -33,13 +33,18 @@ export default class Input extends Component {
                 placeholder={placeholder}
                 onChangeText={this.onChangeText}
                 onSubmitEditing={this.onSubmitEditing}
+                returnKeyType="send"
             />
         )
     }
 }
 const styles = StyleSheet.create({
   input: {
+    borderColor: '#ccc',
+    borderWidth: 1,
+    fontSize: 16,
     padding: 15,
     height: 50,
+    marginBottom: 10
   },
 })

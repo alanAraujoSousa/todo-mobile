@@ -2,11 +2,11 @@ import React from 'react';
 
 import {createAppContainer, createSwitchNavigator} from 'react-navigation';
 
-import AuthStack from "./routes/auth";
-import HomeStack from "./routes/home";
+import AuthStack from "./routes/auth.route";
+import HomeStack from "./routes/home.route";
 
 import AuthLoading from "./scenes/auth/AuthLoading";
-import AuthProvider from "./providers/auth";
+import AuthProvider from "./providers/auth.provider";
 
 const AppStack = createSwitchNavigator(
     {

@@ -5,9 +5,9 @@ import * as api from "../../services/todo.service";
 
 import List from '../../components/List';
 import Input from '../../components/Input';
-import Title from '../../components/Title';
+import Profile from '../../components/Profile';
 
-import { useAuth } from "../../providers/auth";
+import { useAuth } from "../../providers/auth.provider";
 
 export default function Home(props) {
     
@@ -38,11 +38,10 @@ export default function Home(props) {
 
     return (
         <View>
-            <Title>
-                To-Do List
-            </Title>
+            <Profile>
+            </Profile>
             <Input
-                placeholder={'Type a todo, then hit enter!'}
+                placeholder={'Type a todo, hit enter to save, click to delete!'}
                 onSubmitEditing={onAddTodo}
             />
             <List
@@ -51,19 +50,4 @@ export default function Home(props) {
             />
         </View>
     )
-
-// return (
-//     <View style={{flex: 1, backgroundColor: '#fff', alignItems: 'center', justifyContent: 'center'}}>
-//         <Text>{`Welcome ${user.name} (${user.email})`}</Text>
-
-//         {/* TODO: list of TODOS */} 
-
-//         <Button title={"Update Profile"} onPress={() => navigate('UpdateProfile')}/>
-
-//         <Button title={"Log Out"} onPress={() => {
-//             handleLogout();
-//             navigate('Auth');
-//         }}/>
-//     </View>
-// );
 }
