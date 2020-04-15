@@ -41,7 +41,7 @@ export default function Login(props) {
     let formProps = {title: "Login", fields, onSubmit, loading};
     return (
         <View style={{flex: 1, paddingHorizontal: 16, backgroundColor:"#fff"}}>
-            <Header title={"Login"}/>
+            <Header style={{margin: 30, alignItems: "center"}} title={"Login"}/>
             <View style={{flex: 1}}>
                 <ErrorText error={error}/>
                 <Form {...formProps}>

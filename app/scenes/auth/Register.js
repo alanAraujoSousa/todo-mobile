@@ -40,7 +40,7 @@ export default function Register(props) {
     let formProps = {title: "Register", fields, onSubmit, loading };
     return (
         <View style={{flex: 1, paddingHorizontal: 16, backgroundColor:"#fff"}}>
-            <Header title={"Register"}/>
+            <Header style={{margin: 25, alignItems: "center"}} title={"Register"}/>
             <View style={{flex:1}}>
                 <ErrorText error={error}/>
                 <Form {...formProps}>
